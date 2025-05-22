@@ -63,8 +63,12 @@ function DeleteFAQDialog(props) {
     
     return (
         <Modal
-          open={isDeleteFAQ}
-          onClose={() => setIsDeleteFAQ(false)}
+            open={isDeleteFAQ}
+            onClose={() => {
+                if (!showLoading) {
+                    setIsDeleteFAQ(false)
+                }
+            }}
         >
             <div>
                 <StyledDialog>

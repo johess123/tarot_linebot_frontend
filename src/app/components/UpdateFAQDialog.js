@@ -102,8 +102,12 @@ function UpdateFAQDialog(props) {
     
     return (
         <Modal
-          open={isUpdateFAQ}
-          onClose={() => setIsUpdateFAQ(false)}
+            open={isUpdateFAQ}
+            onClose={() => {
+                if (!showLoading) {
+                    setIsUpdateFAQ(false)
+                }
+            }}
         >
             <div>
                 <StyledDialog>

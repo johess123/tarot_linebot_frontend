@@ -96,8 +96,12 @@ function CreateFAQDialog(props) {
     
     return (
         <Modal
-          open={isCreateFAQ}
-          onClose={() => setIsCreateFAQ(false)}
+            open={isCreateFAQ}
+            onClose={() => {
+                if (!showLoading) {
+                    setIsCreateFAQ(false)
+                }
+            }}
         >
             <div>
                 <StyledDialog>

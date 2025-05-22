@@ -32,32 +32,24 @@ function FAQSection(props) {
                     onClick={() => {setShowFAQContent(true)}}
                 >
                     <h2 className="font-bold">{qes}</h2>
-                    <div className="h-10 mt-1 mr-1 text-sm text-gray-400 overflow-y-auto">
+                    <div className="h-10 mt-1 mr-1 text-sm text-gray-400 overflow-y-auto  overflow-x-hidden break-words">
                         {ans}
                     </div>
                 </div>
                 <div className="flex flex-col items-center w-3/10">
-                    <div className="flex justify-center items-center w-20 h-8 rounded-lg bg-gray-200 px-4 py-2 font-bold mb-2">
-                        <FaPencilAlt 
-                            className="w-3 h-3 mr-2"
-                        />
-                        <button
-                            className="text-sm"
-                            onClick={() => {setIsUpdateFAQ(true)}}
-                        >
-                            編輯
-                        </button>
+                    <div
+                        className="flex justify-center items-center w-20 h-8 rounded-lg bg-gray-200 px-4 py-2 font-bold mb-2"
+                        onClick={() => {setIsUpdateFAQ(true)}}
+                    >
+                        <FaPencilAlt className="w-3 h-3 mr-2"/>
+                        <button className="text-sm">編輯</button>
                     </div>
-                    <div className="flex justify-center items-center w-20 h-8 rounded-lg bg-red-600 text-white px-4 py-2 font-bold">
-                        <FaRegTrashCan 
-                            className="w-3 h-3 mr-2"
-                        />
-                        <button
-                            className="text-sm"
-                            onClick={() => {setIsDeleteFAQ(true)}}
-                        >
-                            刪除
-                        </button>
+                    <div
+                        className="flex justify-center items-center w-20 h-8 rounded-lg bg-red-600 text-white px-4 py-2 font-bold"
+                        onClick={() => {setIsDeleteFAQ(true)}}
+                    >
+                        <FaRegTrashCan className="w-3 h-3 mr-2"/>
+                        <button className="text-sm">刪除</button>
                     </div>
                 </div>
             </div>
