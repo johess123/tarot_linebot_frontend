@@ -105,7 +105,7 @@ export default function Home() {
                             </StyledLoading>
                         </div>
                     ) : (
-                        <div className="h-4/5 my-4 overflow-y-auto">
+                        <div className="w-full h-4/5 my-4 overflow-y-auto">
                             {FAQList.map((item) => (
                                 !item.question.is_deleted && !item.answer.is_deleted && (
                                     <FAQSection key={item.question.serial_number} serial_number={item.question.serial_number} qes={item.question.content} ans={item.answer.content} setReload={setReload} />
